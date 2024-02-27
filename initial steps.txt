@@ -1,0 +1,15 @@
+python3 -m venv env
+cd env
+./bin/activate
+pip3 install pytube   
+python3 -m pip install --no-deps -U yt-dlp
+pip3 install customtkinter
+conda install yt-dlp
+
+
+https://youtu.be/jBT4_Cx5ihs
+pip3 install yt-dlp   
+
+
+
+
