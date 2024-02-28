@@ -1,0 +1,3 @@
+list_resolution =[int(i.split("p")[0]) for i in (list(dict.fromkeys([i.resolution for i in yt.streams if i.resolution])))]
+
+for fetching all the resolutions    
