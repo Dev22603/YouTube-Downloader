@@ -13,6 +13,9 @@ def sort_key(string):
     # Extract the numeric prefix from the string
     numeric_prefix = int(''.join(filter(str.isdigit, string)))
     return numeric_prefix
+
+
+
 def select_res():
 
     try:
@@ -57,11 +60,6 @@ def download_video():
     # print(url)
     resolution=resolution_var.get()
     print(f"Resolution selected : {resolution}")
-
-
-
-
-
     progressbar_label.pack(pady=(10,5))
     progressbar.pack(pady=(10,5))
     status_label.pack(pady=(10,5))
@@ -80,7 +78,6 @@ def download_video():
         Title.pack(pady=(10,5))
         Title.update()
         
-        
         # Check if the file already exists
         count = 1
         while os.path.exists(download_path):
@@ -88,7 +85,7 @@ def download_video():
             file_name = f"{file_name} ({count}).mp4"
             download_path = os.path.join(download_dir, file_name)
             count += 1
-        
+       
         # print(download_path)
         stream.download(output_path=download_dir, filename=file_name)
         status_label.configure(text="Download Completed!",text_color="white", fg_color="green")
@@ -145,21 +142,8 @@ Add_download_button.pack(pady=(10,5))
 download_button = ctk.CTkButton(content_frame,text="Download",command=download_video,corner_radius=5, fg_color="green")
 download_button.pack(pady=(10,5))
 
-# create a resolutions combo box
-# resolutions = ["144p","240p","360p","720p","1080p"]
-# print(resolution_var)
-# print(type(resolution_var))
-
-
-
-
 resolution_var=ctk.StringVar()
 resolution_combobox=ttk.Combobox(content_frame, state='readonly',font=14,justify="center",textvariable=resolution_var,cursor="hand2")
-# resolution_combobox=ttk.Combobox(content_frame, values=resolutions, textvariable=resolution_var, state='readonly',font=14,justify="center",cursor="hand2")
-# resolution_combobox.pack(pady=(10,5))
-# resolution_combobox.set()
-
-
 
 
 
