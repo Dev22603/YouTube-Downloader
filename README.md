@@ -1,6 +1,7 @@
 # YouTube Downloader
 
-![Project Image](project_image.png)
+![Project Image 1](project_image_1.png)
+![Project Image 2](project_image_2.png)
 
 > A simple YouTube downloader application built with Python and Tkinter.
 
